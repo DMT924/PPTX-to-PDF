@@ -1,0 +1,122 @@
+PPTX to PDF Converter Documentation
+
+Overview:
+This application converts PowerPoint (PPTX) files to PDF format using Microsoft PowerPoint automation. 
+It provides both single file and batch conversion capabilities through a simple graphical user interface.
+
+System Requirements:
+1. Operating System:
+   - Windows (7/8/10/11)
+   - Not compatible with macOS or Linux
+
+2. Software Requirements:
+   - Python 3.6 or higher
+   - Microsoft PowerPoint (any version: 2010, 2013, 2016, 2019, or Office 365)
+   - No Microsoft account or subscription needed
+   - Internet connection (only for first-time package installation)
+
+3. Required Python Packages:
+   - pywin32: For PowerPoint automation
+   - comtypes: For COM interface handling
+   - tkinter: For the graphical interface (included with Python)
+
+Features:
+1. Conversion Modes:
+   - Single File: Convert individual PPTX files
+   - Folder Mode: Batch convert all PPTX files in a selected folder
+   
+2. User Interface:
+   - Clean, intuitive graphical interface
+   - Simple file/folder selection via Browse button
+   - Real-time progress bar
+   - Status messages during conversion
+   - Preview button for converted PDFs
+   - Option to open output folder after batch conversion
+
+3. Batch Processing Features:
+   - Automatic creation of "PDF_Conversions" subfolder
+   - Maintains original file names
+   - Progress tracking for multiple files
+   - Detailed conversion summary
+   - Failed conversion reporting
+
+4. Error Handling:
+   - Automatic package installation
+   - PowerPoint installation verification
+   - File type validation
+   - Path existence checks
+   - Duplicate file handling
+   - Detailed error messages
+
+Installation:
+1. Ensure Python 3.6+ is installed
+2. Verify PowerPoint is installed
+3. Place all program files in the same directory:
+   - main.py
+   - 2pdf.py
+   - info.txt
+
+Usage Instructions:
+1. Starting the Application:
+   - Run main.py to launch the converter
+   - First run will check requirements and install necessary packages
+
+2. Single File Conversion:
+   - Select "Single File" mode
+   - Click Browse to select a PPTX file
+   - Click "Convert to PDF"
+   - PDF will be created in the same location as the PPTX
+
+3. Batch Folder Conversion:
+   - Select "Folder" mode
+   - Click Browse to select folder containing PPTX files
+   - Click "Convert to PDF"
+   - PDFs will be created in a new "PDF_Conversions" subfolder
+
+4. After Conversion:
+   - Single file: "Open PDF" button appears
+   - Folder: "Open Output Folder" button appears
+   - Success/failure summary displayed
+
+Technical Notes:
+1. Operation:
+   - Uses Windows COM automation
+   - Runs PowerPoint in background
+   - Maintains read-only access to source files
+   - Automatically closes PowerPoint instances
+
+2. Performance:
+   - Conversion speed depends on:
+     * PowerPoint version
+     * System resources
+     * Presentation size/complexity
+   - Multiple files processed sequentially
+
+3. Limitations:
+   - Requires PowerPoint installation
+   - Windows-only compatibility
+   - May show PowerPoint process in Task Manager
+
+Troubleshooting:
+1. Common Issues:
+   - Missing PowerPoint installation
+   - Insufficient permissions
+   - File access conflicts
+   - Memory limitations
+
+2. Error Messages:
+   - Package installation failures
+   - PowerPoint automation errors
+   - File access errors
+   - Conversion failures
+
+Best Practices:
+1. Close active PowerPoint instances before converting
+2. Ensure sufficient disk space for output
+3. Avoid modifying source files during conversion
+4. Regular system updates for optimal compatibility
+
+Support:
+- For issues with Python packages: pip documentation
+- For PowerPoint-related issues: Microsoft Support
+- For conversion errors: Check system requirements and PowerPoint installation
